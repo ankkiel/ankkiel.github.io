@@ -1,0 +1,53 @@
+.button {
+	@include text-style(14px, 400, 1.15, $font-stack-accent, $color-bg-contrast);
+
+	display: block;
+
+	padding: 15px 50px;
+
+	text-align: center;
+	text-decoration: none;
+	letter-spacing: 0.05em;
+
+	border: 0;
+	background-color: $color-decoration-primary;
+
+	&:hover {
+		animation-name: shake-bottom;
+		animation-duration: 1s;
+		animation-play-state: running;
+		animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+		animation-delay: 0s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+
+		animation-fill-mode: both;
+
+		@keyframes shake-bottom {
+			0%,
+			100% {
+				transform: rotate(0deg);
+				transform-origin: 50% 100%;
+			}
+			10% {
+				transform: rotate(2deg);
+			}
+			20%,
+			40%,
+			60% {
+				transform: rotate(-4deg);
+			}
+			30%,
+			50%,
+			70% {
+				transform: rotate(4deg);
+			}
+			80% {
+				transform: rotate(-2deg);
+			}
+			90% {
+				transform: rotate(2deg);
+			}
+		}
+	}
+}

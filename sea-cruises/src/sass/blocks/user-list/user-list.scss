@@ -1,0 +1,67 @@
+.user-list {
+	@include text-style(14px, 400, 1.15, $font-stack-accent);
+	@include tablet {
+		@include reset-list;
+
+		&__item {
+			position: relative;
+
+			display: flex;
+
+			margin-right: 50px;
+
+			cursor: pointer;
+
+			&:first-child {
+				margin-right: 75px;
+			}
+		}
+
+		&__link {
+			text-decoration: none;
+
+			color: $color-text-primary;
+
+			&::after {
+				position: absolute;
+				top: 5px;
+				right: -16px;
+
+				width: 8px;
+				height: 7px;
+
+				content: "";
+
+				border-top: 5px solid #0d3351;
+				border-right: 4px solid transparent;
+				border-left: 4px solid transparent;
+			}
+
+			&--account::before {
+				position: absolute;
+				left: -16px;
+
+				width: 10px;
+				height: 12px;
+
+				content: "";
+
+				background-image: url(../images/common/icon-user.png);
+				background-repeat: no-repeat;
+			}
+
+			&--currency::before {
+				position: absolute;
+				left: -16px;
+
+				width: 10px;
+				height: 12px;
+
+				content: "";
+
+				background-image: url(../images/common/icon-ruble.png);
+				background-repeat: no-repeat;
+			}
+		}
+	}
+}

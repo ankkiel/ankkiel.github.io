@@ -1,0 +1,20 @@
+.contact-tel {
+	@include reset-list;
+
+	&__item {
+		display: flex;
+	}
+
+	&__link {
+		text-decoration: none;
+		letter-spacing: 0.05em;
+
+		color: $color-text-primary;
+
+		font-weight: 700;
+	}
+
+	&__note {
+		font-size: 10px;
+	}
+}

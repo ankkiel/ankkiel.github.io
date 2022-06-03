@@ -1,0 +1,90 @@
+.introduction {
+	@include tablet {
+		background-image: url("../images/bg/sochi-bg-tablet.jpg");
+	}
+	@include desktop {
+		background-image: url("../images/bg/sochi-bg-desktop.jpg");
+	}
+
+	position: relative;
+
+	background-color: #c8e2fd;
+	background-image: url("../images/bg/sochi-bg-mobile.jpg");
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: cover;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		min-height: 583px;
+	}
+
+	&__link {
+		text-decoration: none;
+	}
+
+	&__logo {
+		@include tablet {
+			margin-top: 80px;
+		}
+		@include desktop {
+			margin-top: 62px;
+		}
+
+		margin-top: 26px;
+	}
+
+	&__title {
+		@include text-style(20px, 400, 44px);
+		@include tablet {
+			width: 100%;
+
+			font-size: 26px;
+			line-height: 60px;
+		}
+		@include desktop {
+			margin: 0 auto 62px;
+
+			font-size: 36px;
+			line-height: 80px;
+		}
+
+		display: flex;
+		flex-direction: column;
+
+		width: 244px;
+		margin: 0 auto 41px;
+
+		text-align: center;
+		letter-spacing: 0.05em;
+
+		&-accent {
+			@include text-style(50px, 400, 48px);
+			@include tablet {
+				font-size: 72px;
+			}
+			@include desktop {
+				font-size: 100px;
+			}
+
+			letter-spacing: -0.025em;
+			text-transform: uppercase;
+		}
+	}
+
+	&::after {
+		position: absolute;
+		top: 384px;
+		left: calc(50% - 150px/2);
+
+		width: 130px;
+		height: 240px;
+
+		content: "";
+
+		background-image: url(../images/common/bg-route-line.png);
+	}
+}

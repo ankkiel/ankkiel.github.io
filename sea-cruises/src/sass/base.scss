@@ -1,0 +1,25 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	@include text-style(14px, 400);
+
+	min-width: $width-mobile;
+	margin: 0;
+
+	background-color: $color-bg-primary;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+
+	border-style: none;
+}

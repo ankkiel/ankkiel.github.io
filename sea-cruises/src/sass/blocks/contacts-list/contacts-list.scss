@@ -1,0 +1,26 @@
+.contacts-list {
+	@include text-style(14px, 400, 1.15, $font-stack-accent);
+
+	&__tel-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__tel {
+		margin-top: 15px;
+		margin-bottom: 10px;
+
+		text-decoration: none;
+
+		color: $color-text-primary;
+
+		font-size: 14px;
+		font-weight: 700;
+	}
+
+	&__message {
+		margin-bottom: 10px;
+
+		font-size: 10px;
+	}
+}

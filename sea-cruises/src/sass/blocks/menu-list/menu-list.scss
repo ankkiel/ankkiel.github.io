@@ -1,0 +1,44 @@
+.menu-list {
+	margin: 0;
+	padding: 45px 0 50px;
+
+	list-style: none;
+
+	color: $color-text-contrast;
+	background-color: $color-text-primary;
+
+	&__link {
+		display: inline-block;
+
+		width: 100%;
+		padding: 15px 45px 10px;
+
+		vertical-align: middle;
+		text-decoration: none;
+
+		color: $color-text-contrast;
+
+		font-size: 18px;
+
+		&:hover {
+			transition-timing-function: linear;
+			transition-duration: 0.5s;
+			transition-property: background-color;
+
+			opacity: 0.8;
+			color: $color-text-primary;
+			background-color: $color-decoration-primary;
+		}
+	}
+
+	&--hidden {
+		display: none;
+	}
+
+	&--block {
+		position: absolute;
+		z-index: 12;
+		top: 60px;
+		left: 0;
+	}
+}

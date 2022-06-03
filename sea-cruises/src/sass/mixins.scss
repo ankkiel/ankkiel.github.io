@@ -1,0 +1,62 @@
+@mixin font-face(
+  $font-stack,
+  $path,
+  $font-weight,
+  $style: normal,
+  $font-display: swap
+  ) {
+	@font-face {
+		font-family: quote($font-stack);
+		font-weight: $font-weight;
+		font-style: $style;
+
+		src: url($path+".woff") format("woff"), url($path+".woff2") format("woff2");
+		font-display: $font-display;
+	}
+}
+
+@mixin text-style(
+  $size,
+  $font-weight: 400,
+  $line-height: 1.15,
+  $font-stack: $font-stack-default,
+  $color: $color-text-primary) {
+	color: $color;
+
+	font-family: $font-stack;
+	font-size: $size;
+	font-weight: $font-weight;
+	line-height: $line-height;
+}
+
+@mixin reset-list {
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+@mixin tablet {
+	@media (min-width: $width-tablet) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: $width-desktop) {
+		@content;
+	}
+}
+
+@mixin container {
+	@include tablet {
+		width: $width-wrapper-tablet;
+	}
+	@include desktop {
+		width: $width-wrapper-desktop;
+	}
+
+	width: $width-wrapper-mobile;
+	margin: 0 auto;
+	padding: 0 15px;
+}
