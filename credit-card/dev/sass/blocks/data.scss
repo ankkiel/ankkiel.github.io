@@ -1,0 +1,40 @@
+/* Beginning Data Style */
+.data {
+    &__title {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
+    &__info {
+        margin-bottom: 19px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 29px;
+
+    }
+
+    &__score,
+    &__payment {
+        flex-basis: 36%;
+    }
+
+    &__score {
+        margin-bottom: 5px;
+    }
+
+    &__value {
+        flex-basis: 64%;
+        color: $color-black;
+    }
+}
+/* End Data Style */

@@ -1,0 +1,143 @@
+/* Beginning Card Style */
+.card {
+
+    &__form {
+
+        position: relative;
+        @include mobile {
+            width: 336px;
+        }
+        @include tablet {
+            width: 350px;
+        }
+
+    }
+
+    &__title {
+        font-family: $font-family-opensans;
+        color: $color-black;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 25.45px;
+        margin-bottom: 19px;
+    }
+
+    &-content {
+
+        position: relative;
+        background-color: $color-card;
+        z-index: 999;
+        border: 1px solid $color-border;
+        border-radius: 10px;
+        padding: 25px 16px 14px 15px;
+
+        transition: 0.4s;
+        margin-bottom: 36px;
+
+        &__title {
+            margin-bottom: 3px;
+        }
+
+        &:hover {
+            box-shadow: -6px -6px 20px -10px rgba(0, 0, 0, 0.5);
+            transition: 0.6s;
+        }
+
+        &__numbers {
+                border: 0 none;           
+        }
+
+        &__time {
+            border: 0 none;
+            margin-bottom: 5px;
+        }
+
+        &__person {
+            width: 100%;  
+        }
+
+    }
+
+    &-back {
+        position: absolute;
+        text-align: right;
+        background-color: $color-card;
+        width: 370px;
+        border: 1px solid $color-border;
+        border-radius: 10px;
+        padding-bottom: 87px;
+        font-weight: normal;
+        line-height: 21px;
+
+        &::before {
+            content: '';
+            display: block;
+            height: 42px;
+            background-color: $color-border;
+            margin-top: 26px;
+            margin-bottom: 14px;
+        }
+
+        &__code {
+            margin-right: 15px;
+            width: 138px;
+        }
+    
+        @include mobile {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 320px;
+        }
+        @include tablet {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        @include desktop {
+            position: absolute;
+            top: 22px;
+            left: 192px;
+            width: 370px;
+        }
+    }
+
+    &-button {
+            margin-left: 15px;
+            width: 133px;
+            padding: 12px;
+            border: none;
+            border-radius: 20px;
+            background-color: #005abf;
+            background-image: linear-gradient(to top, rgba(37, 36, 35, 0.18) 0%, rgba(37, 36, 35, 0) 100%);
+            color: $color-main;
+            font-family: $font-family-opensans;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 18px;
+            outline: none;
+            transition: 0.6s;
+
+
+            &:hover {
+                transition: all 0.6s ease-in-out;
+                transform: scale(1.1);
+
+            }
+            @include mobile {
+                margin-top: 20px;
+            }
+            @include tablet {
+                margin-top: 0;
+            }
+        }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* End Card Style */

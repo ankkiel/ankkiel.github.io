@@ -1,0 +1,66 @@
+/* Beginning Page Style */
+.page {
+    background-color: #101114;
+
+    &-main {
+        display: flex;
+        justify-content: center;
+        margin-top: 79px;
+        margin-bottom: 79px;
+        font-size: 16px;
+        color: $color-grey;
+        line-height: 21px;
+
+        &__data {
+
+            @include mobile {
+                padding: 43px 122px 35px 50px;
+            }
+            @include tablet {
+                padding: 43px 161px 45px 30px;
+            }
+            @include desktop {
+                padding: 43px 161px 45px 30px;
+            }
+            
+        }
+
+        &__content {
+            background-color: $color-card;
+            width: 639px;
+            @include mobile {
+                width: 399px;
+            }
+            @include tablet {
+                width: 500px;
+            }
+            @include desktop {
+                width: 639px;
+            }
+
+        }
+
+        @include mobile {
+            flex-wrap: wrap;
+
+        }
+        
+        @include tablet {
+            flex-wrap: wrap;
+
+
+        }
+        @include desktop {
+            min-width: 320px;
+            justify-content: center;
+            flex-direction: row;
+
+        }
+
+
+    }
+
+
+}
+
+/* End Page Style */
